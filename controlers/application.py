@@ -7,11 +7,13 @@ class menu_controller:
 
     def main_menu(self):
         self.menu_views.display_main_menu()
-        user_input=input
+        user_input=input()
 
         if user_input=="1":
+            self.menu_views.tournament_menu()
         
         elif user_input=="2":
+            self.menu_views.palyer_menu()
 
         elif user_input=="3":
 
