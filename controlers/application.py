@@ -10,10 +10,10 @@ class menu_controller:
         user_input=input()
 
         if user_input=="1":
-            self.menu_views.tournament_menu()
+            self.menu_views.display_tournament_menu()
         
         elif user_input=="2":
-            self.menu_views.palyer_menu()
+            self.menu_views.display_player_menu()
 
         elif user_input=="3":
 
