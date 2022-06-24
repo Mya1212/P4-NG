@@ -1,10 +1,13 @@
 from views.menu import menu_views
+from sys import exit
+from tinydb import TinyDB
 
-class menu_controller:
+class Application_controller:
 
     def __init__(self):
         self.menu=menu_views()
 
+# rajouter boucle while tant 
     def main_menu(self):
         self.menu_views.display_main_menu()
         user_input=input()
