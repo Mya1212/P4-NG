@@ -1,6 +1,6 @@
 from controlers.player import Player
 
-class Create_player:
+class CreatePlayer:
 
     first_name = input('Entrez votre nom :\n>')
     last_name = input('Entrez votre prénom :\n>')
