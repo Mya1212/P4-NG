@@ -1,6 +1,5 @@
-#appeler views player
-
-#creer methode créer joueur
+from views.player import PlayerViews
+from views.menu import MenuViews
 
 class Player:
     def __init__(self, first_name, last_name, birth_date, sex, rank) -> None:
@@ -33,24 +32,63 @@ class Player:
     def save_player_to_DB(self):
         """ save the player to the database """
 
+    def create_player(self):
+        self.views.CreatePlayer()
 
-"""
-    @property
-    def sex(self):
-        return self._sex
+    def update_player(self):
+        while True:
+            self.menu.display_player_menu()
+            user_input=input()
 
-    @sex.setter
-    def sex(self, value):
-        if value != "M" and value != "F":
-            raise ValueError("Le sex doit etre F ou M")
-        self._sex = value
+            if user_input=="1":
+                #player list
+                #select player
+                #edit
+                pass
+            
+            elif user_input=="2":
+                #player list
+                #select player
+                #delete
+                pass
 
-    @property
-    def full_name(self):
-        return self.first_name + " " + self.name
-@FGLnK+4ae4JVtkf
+            elif user_input=="3":
+                self.menu.display_player_menu()
+            
+            else:
+                self.menu.display_message("Invalid choice")
 
-    """
+    def display_player_name(self):
+        #players = []
+        #players.sort(key=)
+        self.views.diplay_player_list()
+
+    def display_player_rank(self, sort_by: str):
+        self.views.diplay_player_list()
+        
+    def menu_player(self):
+        while True:
+            self.menu.display_player_menu()
+            user_input=input()
+
+            if user_input=="1":
+                self.create_player()
+            
+            elif user_input=="2":
+                self.update_player()
+
+            elif user_input=="3":
+                self.display_player_name()
+
+            elif user_input=="4":
+                self.display_player_rank()
+
+            elif user_input=="5":
+                self.menu.display_player_menu()
+                exit()
+            
+            else:
+                self.menu.display_message("Invalid choice")
 
 if __name__ == "__main__":
     player = Player("pierre","dupont","12-12-1988","M","800")
