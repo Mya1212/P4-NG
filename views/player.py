@@ -16,4 +16,9 @@ class PlayerViews:
             print("Erreur veuillez entrez un genre valide F ou M")
 
     def display_player_list(self):
+        #afficher liste joueur
+        pass
+
+    def update_player(self):
+        #afficher liste des joueurs
         pass
