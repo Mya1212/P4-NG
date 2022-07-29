@@ -1,26 +1,28 @@
-from views.menu import menu_views
+from views.menu import MenuViews
 from sys import exit
 from tinydb import TinyDB
 
 class ApplicationController:
 
     def __init__(self):
-        self.menu=menu_views()
+        self.menu = MenuViews()
 
-# rajouter boucle while
-    def main_menu(self):
-        self.menu_views.display_main_menu()
-        user_input=input()
+    def start(self):
 
-        if user_input=="1":
-            self.menu_views.display_tournament_menu()
-        
-        elif user_input=="2":
-            self.menu_views.display_player_menu()
+        while True:
+           self.menu.display_main_menu()
+           user_input=input()
 
-        elif user_input=="3":
+           if user_input=="1":
+                self.menu.display_tournament_menu()
+            
+           elif user_input=="2":
+                self.menu.display_player_menu()
 
-        else :
-            print("error")
-
+           elif user_input=="3":
+                self.menu.display_message("Good by.")
+                exit()
+            
+           else:
+            self.menu.display_message("Invalid choice")
         
